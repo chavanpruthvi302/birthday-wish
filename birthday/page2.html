@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2 – Cuteness Meter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page2-container">
+
+    <h1>Cuteness Check 💖</h1>
+
+    <!-- Photo space -->
+    <div class="photo-space-big">
+        <img src="page2=1.jpg" alt="">
+    </div>
+
+    <p class="meter-label">Cuteness Meter 💕</p>
+
+    <div class="meter-box">
+        <div class="meter-fill" id="meterFill"></div>
+    </div>
+
+    <p id="meterText">Tap the button to check</p>
+
+    <button id="checkBtn" class="check-btn">Check 💗</button>
+
+</div>
+
+<script>
+    const checkBtn = document.getElementById("checkBtn");
+    const meterFill = document.getElementById("meterFill");
+    const meterText = document.getElementById("meterText");
+
+    checkBtn.addEventListener("click", () => {
+        let value = 0;
+        meterText.textContent = "Measuring cuteness... 💕";
+        checkBtn.disabled = true;
+
+        const interval = setInterval(() => {
+            value += 10;
+            meterFill.style.width = value + "%";
+
+            if (value >= 100) {
+                clearInterval(interval);
+                meterText.textContent = "Cuteness OVERLOADED 💖🥰";
+
+                setTimeout(() => {
+                    window.location.href = "page3.html";
+                }, 1500);
+            }
+        }, 300);
+    });
+</script>
+
+</body>
+</html>

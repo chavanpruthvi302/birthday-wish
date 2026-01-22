@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Surprise button (left side) -->
+<button class="surprise-btn" onclick="goToSurprise()">🎁 Surprise</button>
+
+<div class="page1-container">
+
+    <h1 class="page-title">Just for You 💖</h1>
+
+    <!-- Card -->
+    <div class="card">   
+        <!-- Photo Section -->
+        <div class="photo-grid">
+            <div class="photo-space">
+                <img src="page1=1.jpg" alt="">
+            </div>
+            <div class="photo-space">
+                <img src="page1=2.jpg" alt="">
+            </div>
+            <div class="photo-space">
+                <img src="page1=3.jpg" alt="">
+            </div>
+        </div>
+
+
+        <!-- Music button -->
+        <button class="music-btn-small" onclick="playMusic()">🎵 Play Song</button>
+
+    </div>
+</div>
+
+<!-- Audio -->
+<audio id="song">
+    <source src="preview.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    function goToSurprise() {
+        window.location.href = "page2.html";
+    }
+
+    function playMusic() {
+        const song = document.getElementById("song");
+        song.play();
+    }
+</script>
+
+</body>
+</html>

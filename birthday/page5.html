@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 5 – Birthday Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page5-container">
+
+    <!-- Glitter Background -->
+    <div class="glitter-bg"></div>
+
+    <!-- Card -->
+    <div class="birthday-card">
+
+        <!-- Left: Photo Space -->
+        <div class="card-photo">
+            <span><img src="page5=1.jpg" alt=""></span>
+            <!-- later: <img src="images/page5.jpg"> -->
+        </div>
+
+        <!-- Right: Text -->
+        <div class="card-text">
+            <h1>Happy Birthday!! 🎉</h1>
+        
+            <!-- Cake -->
+<div class="cake">
+    <div class="cake-top">
+        <span class="cake-letter">A</span>
+    </div>
+    <div class="cake-base"></div>
+</div>
+
+<!-- Next Button -->
+<button class="next-btn" onclick="location.href='page6.html'">
+    Next 🎀
+</button>
+
+            
+
+            <p>
+                May your birthday bring a lot of smiles to your face,  
+                happiness to your heart, and many blessings to your  
+                whole life 💖
+            </p>
+
+            <small>Made with ❤️ just for you</small>
+        </div>
+
+    </div>
+
+</div>
+<!-- Fireworks container -->
+<div class="fireworks"></div>
+
+<script>
+    const fireworksContainer = document.querySelector(".fireworks");
+
+    for (let i = 0; i < 25; i++) {
+        const spark = document.createElement("span");
+        spark.className = "firework";
+        spark.style.left = Math.random() * 100 + "vw";
+        spark.style.top = Math.random() * 60 + "vh";
+        spark.style.animationDelay = Math.random() * 5 + "s";
+        fireworksContainer.appendChild(spark);
+    }
+</script>
+<!-- Fireworks Container -->
+<div class="fireworks"></div>
+
+<!-- Crackle Sound -->
+<audio id="fireSound">
+    <source src="preview.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
